@@ -8,7 +8,6 @@ interface FadeInProps {
   delay?: number;
   direction?: "up" | "down" | "left" | "right" | "none";
   className?: string;
-  as?: "div" | "section" | "article";
 }
 
 export default function FadeIn({
@@ -16,7 +15,6 @@ export default function FadeIn({
   delay = 0,
   direction = "up",
   className,
-  as = "div",
 }: FadeInProps) {
   const directionOffset = {
     up: { y: 40 },
@@ -26,10 +24,8 @@ export default function FadeIn({
     none: {},
   };
 
-  const Component = motion.create(as);
-
   return (
-    <Component
+    <motion.div
       initial={{ opacity: 0, ...directionOffset[direction] }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
@@ -37,6 +33,6 @@ export default function FadeIn({
       className={cn(className)}
     >
       {children}
-    </Component>
+    </motion.div>
   );
 }
