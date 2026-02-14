@@ -1,8 +1,6 @@
 "use client";
-
-import Container from "@/components/ui/Container";
 import CountUp from "@/components/animations/CountUp";
-import FadeIn from "@/components/animations/FadeIn";
+import FadeUp from "@/components/animations/FadeUp";
 
 const stats = [
   { value: 15, suffix: "+", label: "Années d'expérience" },
@@ -13,21 +11,19 @@ const stats = [
 
 export default function StatsSection() {
   return (
-    <section className="py-16 bg-accent-500">
-      <Container>
+    <section className="py-20 bg-primary-900">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
-          {stats.map((stat, index) => (
-            <FadeIn key={stat.label} delay={index * 0.1} className="text-center">
-              <div className="text-4xl md:text-5xl font-bold font-heading text-neutral-900">
+          {stats.map((stat, i) => (
+            <FadeUp key={stat.label} delay={i * 0.1} className="text-center">
+              <div className="font-heading text-5xl md:text-6xl font-bold text-white">
                 <CountUp end={stat.value} suffix={stat.suffix} />
               </div>
-              <p className="mt-2 text-sm font-medium text-neutral-800">
-                {stat.label}
-              </p>
-            </FadeIn>
+              <p className="mt-2 text-sm font-medium text-neutral-300">{stat.label}</p>
+            </FadeUp>
           ))}
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

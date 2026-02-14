@@ -1,71 +1,87 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import Container from "@/components/ui/Container";
-import SectionHeading from "@/components/ui/SectionHeading";
-import Badge from "@/components/ui/Badge";
-import Button from "@/components/ui/Button";
-import FadeIn from "@/components/animations/FadeIn";
+import FadeUp from "@/components/animations/FadeUp";
 import { projects } from "@/data/projects";
 import { PROJECT_CATEGORY_LABELS } from "@/types";
 
 export default function FeaturedProjects() {
-  const featured = projects.filter((p) => p.featured).slice(0, 4);
+  const featured = projects.filter((p) => p.featured).slice(0, 3);
+  if (featured.length === 0) return null;
+
+  const [main, ...rest] = featured;
 
   return (
-    <section className="py-[clamp(4rem,8vw,8rem)] bg-neutral-50">
-      <Container>
-        <FadeIn>
-          <SectionHeading
-            title="Nos Réalisations"
-            subtitle="Découvrez une sélection de nos projets les plus prestigieux"
-          />
-        </FadeIn>
+    <section className="py-24 bg-neutral-50">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        {/* Header */}
+        <FadeUp className="flex items-end justify-between mb-12">
+          <div>
+            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent-600 mb-3">
+              Portfolio
+            </p>
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-neutral-900">
+              Nos Réalisations
+            </h2>
+          </div>
+          <Link
+            href="/realisations"
+            className="hidden sm:inline-flex items-center gap-2 text-sm font-semibold text-neutral-700 hover:text-primary-900 transition-colors"
+          >
+            Voir tout
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
+        </FadeUp>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          {featured.map((project, index) => (
-            <FadeIn key={project.id} delay={index * 0.1}>
-              <Link
-                href={`/realisations/${project.slug}`}
-                className="group relative block overflow-hidden rounded-xl aspect-[4/3]"
-              >
-                <Image
-                  src={project.featuredImage}
-                  alt={project.title}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
+        {/* Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          {/* Main large project */}
+          <FadeUp>
+            <Link href={`/realisations/${main.slug}`} className="group relative block overflow-hidden rounded-2xl aspect-[4/3]">
+              <Image
+                src={main.featuredImage}
+                alt={main.title}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-0 left-0 p-6 translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <p className="text-xs font-semibold text-accent-400 uppercase tracking-wider mb-1">
+                  {PROJECT_CATEGORY_LABELS[main.category]}
+                </p>
+                <h3 className="font-heading text-xl font-bold text-white">{main.title}</h3>
+                <p className="text-sm text-neutral-200 mt-1">{main.location} — {main.year}</p>
+              </div>
+            </Link>
+          </FadeUp>
 
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <Badge variant="accent" className="mb-3">
-                    {PROJECT_CATEGORY_LABELS[project.category]}
-                  </Badge>
-                  <h3 className="text-xl md:text-2xl font-bold">
-                    {project.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-neutral-200 line-clamp-2">
-                    {project.shortDescription}
-                  </p>
-                  <div className="mt-3 flex items-center gap-4 text-xs text-neutral-300">
-                    {project.surface && <span>{project.surface}</span>}
-                    <span>{project.location}</span>
-                    <span>{project.year}</span>
+          {/* Two smaller projects */}
+          <div className="grid grid-rows-2 gap-4">
+            {rest.map((project, idx) => (
+              <FadeUp key={project.id} delay={(idx + 1) * 0.1}>
+                <Link href={`/realisations/${project.slug}`} className="group relative block overflow-hidden rounded-2xl h-full min-h-[180px]">
+                  <Image
+                    src={project.featuredImage}
+                    alt={project.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    sizes="(max-width: 1024px) 100vw, 25vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute bottom-0 left-0 p-5 translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                    <p className="text-xs font-semibold text-accent-400 uppercase tracking-wider mb-1">
+                      {PROJECT_CATEGORY_LABELS[project.category]}
+                    </p>
+                    <h3 className="font-heading text-lg font-bold text-white">{project.title}</h3>
                   </div>
-                </div>
-              </Link>
-            </FadeIn>
-          ))}
+                </Link>
+              </FadeUp>
+            ))}
+          </div>
         </div>
-
-        <FadeIn className="mt-12 text-center">
-          <Button href="/realisations" variant="secondary" size="lg">
-            Voir toutes nos réalisations
-          </Button>
-        </FadeIn>
-      </Container>
+      </div>
     </section>
   );
 }

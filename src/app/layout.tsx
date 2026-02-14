@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, DM_Sans } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import ScrollProgress from "@/components/ui/ScrollProgress";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -48,6 +49,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${playfair.variable} ${dmSans.variable}`}>
       <body className="antialiased">
+        <ScrollProgress />
         <Header />
         <main>{children}</main>
         <Footer />
