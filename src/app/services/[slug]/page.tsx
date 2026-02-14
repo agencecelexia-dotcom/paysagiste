@@ -39,7 +39,7 @@ export default async function ServicePage({
   return (
     <main>
       {/* Hero */}
-      <section className="relative pt-32 pb-20 bg-primary-900">
+      <section className="relative pt-24 sm:pt-32 pb-12 sm:pb-20 bg-primary-900">
         <div className="absolute inset-0 opacity-20">
           <Image src={service.image} alt="" fill className="object-cover" sizes="100vw" />
         </div>

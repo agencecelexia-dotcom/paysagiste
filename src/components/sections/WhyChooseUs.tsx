@@ -13,7 +13,7 @@ export default function WhyChooseUs() {
   return (
     <section className="py-24 bg-primary-50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Image */}
           <FadeUp>
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">

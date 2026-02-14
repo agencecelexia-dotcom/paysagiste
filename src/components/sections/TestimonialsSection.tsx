@@ -15,10 +15,10 @@ export default function TestimonialsSection() {
           </h2>
         </FadeUp>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
           {displayed.map((t, i) => (
             <FadeUp key={t.id} delay={i * 0.1}>
-              <div className="h-full flex flex-col p-8 rounded-2xl bg-neutral-50 border border-neutral-200">
+              <div className="h-full flex flex-col p-6 md:p-8 rounded-2xl bg-neutral-50 border border-neutral-200">
                 {/* Stars */}
                 <div className="flex gap-0.5 mb-5">
                   {Array.from({ length: 5 }).map((_, j) => (

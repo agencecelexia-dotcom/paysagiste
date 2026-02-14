@@ -34,7 +34,7 @@ export default function HeroSection() {
         {/* H1 animated */}
         <SplitText
           text="L'Art des Jardins d'Exception"
-          className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1]"
+          className="font-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1]"
           delay={0.2}
         />
 
@@ -58,13 +58,13 @@ export default function HeroSection() {
         >
           <Link
             href="/contact"
-            className="px-8 py-4 rounded-lg bg-accent-500 text-neutral-900 font-semibold hover:bg-accent-600 transition-colors text-sm"
+            className="px-6 sm:px-8 py-3 sm:py-4 rounded-lg bg-accent-500 text-neutral-900 font-semibold hover:bg-accent-600 transition-colors text-sm"
           >
             Demander un Devis Gratuit
           </Link>
           <Link
             href="/realisations"
-            className="px-8 py-4 rounded-lg border border-white/40 text-white font-semibold hover:bg-white/10 transition-colors text-sm"
+            className="px-6 sm:px-8 py-3 sm:py-4 rounded-lg border border-white/40 text-white font-semibold hover:bg-white/10 transition-colors text-sm"
           >
             Voir nos Réalisations
           </Link>

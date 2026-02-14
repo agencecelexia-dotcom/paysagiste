@@ -42,7 +42,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-20 bg-primary-900">
+      <section className="relative pt-24 sm:pt-32 pb-12 sm:pb-20 bg-primary-900">
         <div className="absolute inset-0 opacity-30">
           <Image
             src={project.featuredImage}

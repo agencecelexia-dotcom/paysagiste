@@ -16,7 +16,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative pt-32 pb-20 bg-primary-900">
+      <section className="relative pt-24 sm:pt-32 pb-12 sm:pb-20 bg-primary-900">
         <div className="absolute inset-0 opacity-20">
           <Image
             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&h=400&fit=crop&q=80"

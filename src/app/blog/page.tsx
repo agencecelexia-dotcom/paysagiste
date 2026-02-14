@@ -15,7 +15,7 @@ export default function BlogPage() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative pt-32 pb-20 bg-primary-900">
+      <section className="relative pt-24 sm:pt-32 pb-12 sm:pb-20 bg-primary-900">
         <div className="absolute inset-0 opacity-20">
           <Image
             src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1920&h=400&fit=crop&q=80"
@@ -40,7 +40,7 @@ export default function BlogPage() {
       {/* Blog Grid */}
       <section className="py-[clamp(4rem,8vw,8rem)]">
         <Container>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
             {blogPosts.map((post, index) => (
               <FadeIn key={post.id} delay={index * 0.1}>
                 <BlogCard post={post} />

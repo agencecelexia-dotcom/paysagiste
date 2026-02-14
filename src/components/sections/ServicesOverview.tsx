@@ -57,7 +57,7 @@ export default function ServicesOverview() {
             <FadeUp key={svc.id} delay={idx * 0.08}>
               <Link
                 href={`/services/${svc.slug}`}
-                className="group block p-8 rounded-2xl border border-neutral-200 hover:border-primary-300 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                className="group block p-5 sm:p-8 rounded-2xl border border-neutral-200 hover:border-primary-300 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary-50 text-primary-700 group-hover:bg-accent-50 group-hover:text-accent-600 transition-colors">
                   {icons[svc.icon] || icons.leaf}

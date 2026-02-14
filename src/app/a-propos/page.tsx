@@ -36,7 +36,7 @@ export default function AProposPage() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative pt-32 pb-20 bg-primary-900">
+      <section className="relative pt-24 sm:pt-32 pb-12 sm:pb-20 bg-primary-900">
         <div className="absolute inset-0 opacity-20">
           <Image
             src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?w=1920&h=400&fit=crop&q=80"
@@ -114,7 +114,7 @@ export default function AProposPage() {
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((value, index) => (
               <FadeIn key={value.title} delay={index * 0.1}>
-                <div className="text-center rounded-xl bg-neutral-50 p-8 h-full">
+                <div className="text-center rounded-xl bg-neutral-50 p-5 sm:p-8 h-full">
                   <div className="mx-auto mb-4 h-12 w-12 rounded-full bg-accent-100 flex items-center justify-center text-accent-600 font-heading text-xl font-bold">
                     {value.title[0]}
                   </div>
@@ -147,13 +147,13 @@ export default function AProposPage() {
             {team.map((member, index) => (
               <FadeIn key={member.id} delay={index * 0.1}>
                 <div className="group text-center">
-                  <div className="relative mx-auto h-48 w-48 overflow-hidden rounded-full mb-4">
+                  <div className="relative mx-auto h-32 w-32 sm:h-40 sm:w-40 lg:h-48 lg:w-48 overflow-hidden rounded-full mb-4">
                     <Image
                       src={member.photo}
                       alt={member.name}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
-                      sizes="192px"
+                      sizes="(max-width: 640px) 128px, (max-width: 1024px) 160px, 192px"
                     />
                   </div>
                   <h3 className="text-lg font-bold text-neutral-900">
@@ -182,7 +182,7 @@ export default function AProposPage() {
             <p className="text-neutral-600 mb-8">
               Des garanties de qualité et de professionnalisme
             </p>
-            <div className="flex flex-wrap justify-center gap-8 items-center">
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-8 items-center">
               {["QualiPaysage", "RGE", "Artisan Certifié", "Éco-Jardin"].map(
                 (label) => (
                   <div
