@@ -50,7 +50,7 @@ export { Badge, badgeVariants }
 // Legacy default export for backward compatibility with old pages
 const variantClassMap: Record<string, string> = {
   primary: "bg-primary-900 text-white",
-  accent: "bg-accent-500 text-neutral-900",
+  accent: "bg-accent-500 text-white",
   default: "bg-primary text-primary-foreground",
   secondary: "bg-secondary text-secondary-foreground",
   outline: "border-border text-foreground bg-transparent",
