@@ -16,8 +16,8 @@ export default function HeroSection() {
         className="object-cover"
         sizes="100vw"
       />
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/35 to-black/70" />
+      {/* Overlay — opacité uniforme pour maximiser le contraste du texte */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/65 to-black/80" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
@@ -26,7 +26,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.22,1,0.36,1] }}
-          className="mb-6 inline-block text-xs font-semibold tracking-[0.2em] uppercase text-accent-400"
+          className="mb-6 inline-block text-xs font-semibold tracking-[0.2em] uppercase text-accent-300 [text-shadow:0_1px_8px_rgba(0,0,0,0.9)]"
         >
           Paysagiste de prestige — Lyon
         </motion.p>
@@ -34,7 +34,7 @@ export default function HeroSection() {
         {/* H1 animated */}
         <SplitText
           text="L'Art des Jardins d'Exception"
-          className="font-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1]"
+          className="font-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] [text-shadow:0_2px_16px_rgba(0,0,0,0.8)]"
           delay={0.2}
         />
 
@@ -43,7 +43,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.7, ease: [0.22,1,0.36,1] }}
-          className="mt-6 max-w-2xl mx-auto text-lg text-neutral-200 leading-relaxed"
+          className="mt-6 max-w-2xl mx-auto text-lg text-white/90 leading-relaxed [text-shadow:0_1px_6px_rgba(0,0,0,0.7)]"
         >
           Nous créons des espaces extérieurs uniques qui reflètent votre personnalité.
           Conception, réalisation, entretien — un accompagnement complet et sur mesure.
