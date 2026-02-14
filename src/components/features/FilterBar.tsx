@@ -21,7 +21,7 @@ export default function FilterBar({
           "rounded-full px-5 py-2 text-sm font-medium transition-all duration-300 cursor-pointer",
           activeFilter === "all"
             ? "bg-primary-700 text-white shadow-md"
-            : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
+            : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
         )}
       >
         Tous
@@ -34,7 +34,7 @@ export default function FilterBar({
             "rounded-full px-5 py-2 text-sm font-medium transition-all duration-300 cursor-pointer",
             activeFilter === cat.value
               ? "bg-primary-700 text-white shadow-md"
-              : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
+              : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
           )}
         >
           {cat.label}

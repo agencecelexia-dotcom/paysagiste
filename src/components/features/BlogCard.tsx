@@ -29,7 +29,7 @@ export default function BlogCard({ post }: BlogCardProps) {
           <Badge variant="primary">
             {BLOG_CATEGORY_LABELS[post.category]}
           </Badge>
-          <span className="text-xs text-neutral-400">
+          <span className="text-xs text-neutral-500">
             {post.readingTime} min de lecture
           </span>
         </div>
@@ -39,7 +39,7 @@ export default function BlogCard({ post }: BlogCardProps) {
         <p className="mt-2 text-sm text-neutral-600 leading-relaxed line-clamp-3">
           {post.excerpt}
         </p>
-        <div className="mt-4 flex items-center justify-between text-xs text-neutral-400">
+        <div className="mt-4 flex items-center justify-between text-xs text-neutral-500">
           <span>{post.author}</span>
           <time dateTime={post.publishDate}>{formatDate(post.publishDate)}</time>
         </div>

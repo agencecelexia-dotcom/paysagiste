@@ -45,12 +45,12 @@ export default async function ServicePage({
         </div>
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
           <FadeUp>
-            <nav className="mb-6 text-sm text-neutral-400">
+            <nav className="mb-6 text-sm text-neutral-300">
               <Link href="/" className="hover:text-white transition-colors">Accueil</Link>
               <span className="mx-2">/</span>
               <Link href="/services" className="hover:text-white transition-colors">Services</Link>
               <span className="mx-2">/</span>
-              <span className="text-neutral-200">{service.title}</span>
+              <span className="text-white">{service.title}</span>
             </nav>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white">
               {service.title}

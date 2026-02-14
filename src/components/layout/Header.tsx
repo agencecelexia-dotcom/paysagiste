@@ -183,7 +183,7 @@ export default function Header() {
                         <Link
                           key={svc.id}
                           href={`/services/${svc.slug}`}
-                          className="block py-2 text-sm text-neutral-500 hover:text-primary-800 transition-colors"
+                          className="block py-2 text-sm text-neutral-700 hover:text-primary-800 transition-colors"
                         >
                           {svc.title}
                         </Link>
