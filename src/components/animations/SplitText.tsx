@@ -42,9 +42,8 @@ export default function SplitText({
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className={className}
     >
-      <Tag className="inline">
+      <Tag className={`inline ${className}`}>
         {words.map((word, i) => (
           <motion.span
             key={i}
