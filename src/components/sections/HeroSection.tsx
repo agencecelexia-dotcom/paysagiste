@@ -58,7 +58,7 @@ export default function HeroSection() {
         >
           <Link
             href="/contact"
-            className="px-6 sm:px-8 py-3 sm:py-4 rounded-lg bg-accent-500 text-neutral-900 font-semibold hover:bg-accent-600 transition-colors text-sm"
+            className="px-6 sm:px-8 py-3 sm:py-4 rounded-lg bg-accent-500 text-white font-semibold hover:bg-accent-600 transition-colors text-sm"
           >
             Demander un Devis Gratuit
           </Link>
