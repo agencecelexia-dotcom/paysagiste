@@ -46,13 +46,14 @@ export default function FeaturedProjects() {
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute bottom-0 left-0 p-6 translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+              {/* Gradient permanent — texte toujours lisible */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-black/90 transition-all duration-300" />
+              <div className="absolute bottom-0 left-0 p-6">
                 <p className="text-xs font-semibold text-accent-400 uppercase tracking-wider mb-1">
                   {PROJECT_CATEGORY_LABELS[main.category]}
                 </p>
                 <h3 className="font-heading text-xl font-bold text-white">{main.title}</h3>
-                <p className="text-sm text-neutral-200 mt-1">{main.location} — {main.year}</p>
+                <p className="text-sm text-neutral-300 mt-1">{main.location} — {main.year}</p>
               </div>
             </Link>
           </FadeUp>
@@ -69,8 +70,9 @@ export default function FeaturedProjects() {
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                     sizes="(max-width: 1024px) 100vw, 25vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute bottom-0 left-0 p-5 translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                  {/* Gradient permanent */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent group-hover:from-black/90 transition-all duration-300" />
+                  <div className="absolute bottom-0 left-0 p-5">
                     <p className="text-xs font-semibold text-accent-400 uppercase tracking-wider mb-1">
                       {PROJECT_CATEGORY_LABELS[project.category]}
                     </p>
