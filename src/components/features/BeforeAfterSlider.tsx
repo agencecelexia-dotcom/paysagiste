@@ -47,7 +47,7 @@ export default function BeforeAfterSlider({
                 stroke="currentColor"
                 strokeWidth="2.5"
                 strokeLinecap="round"
-                className="text-neutral-900"
+                className="text-white"
               >
                 <path d="M18 8l4 4-4 4M6 8l-4 4 4 4" />
               </svg>

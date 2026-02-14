@@ -146,7 +146,7 @@ export default async function ServicePage({
             </p>
             <Link
               href="/contact"
-              className="inline-flex px-8 py-4 rounded-lg bg-accent-500 text-neutral-900 font-semibold hover:bg-accent-600 transition-colors"
+              className="inline-flex px-8 py-4 rounded-lg bg-accent-500 text-white font-semibold hover:bg-accent-600 transition-colors"
             >
               Demander un Devis
             </Link>
