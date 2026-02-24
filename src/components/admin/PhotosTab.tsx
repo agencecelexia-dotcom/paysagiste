@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { X, ZoomIn, Info } from "lucide-react";
+import { X, ZoomIn } from "lucide-react";
 import Image from "next/image";
 
 interface PhotoItem {
@@ -103,22 +103,7 @@ export default function PhotosTab() {
       {/* Header */}
       <div>
         <h1 className="font-heading text-3xl font-bold text-neutral-900">Bibliothèque photos</h1>
-        <p className="mt-1 text-neutral-500">Pack générique paysagiste — remplacez les fichiers selon vos besoins</p>
-      </div>
-
-      {/* Info box */}
-      <div className="flex gap-3 rounded-xl border border-blue-200 bg-blue-50 px-5 py-4">
-        <Info size={18} className="text-blue-600 flex-shrink-0 mt-0.5" />
-        <div className="text-sm text-blue-700">
-          <p className="font-semibold mb-1">Pack photos générique paysagiste</p>
-          <p>
-            Pour personnaliser le site, remplacez les fichiers dans{" "}
-            <code className="rounded bg-blue-100 px-1.5 py-0.5 font-mono text-xs">
-              public/images/_template/
-            </code>{" "}
-            en conservant exactement les mêmes noms de fichiers, puis committez les changements.
-          </p>
-        </div>
+        <p className="mt-1 text-neutral-500">Toutes les photos utilisées sur le site</p>
       </div>
 
       {/* Groups */}
