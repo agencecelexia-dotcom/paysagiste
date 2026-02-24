@@ -98,6 +98,9 @@ export default function Footer() {
             <Link href="/politique-de-confidentialite" className="hover:text-white transition-colors">
               Confidentialité
             </Link>
+            <Link href="/admin/dashboard" className="hover:text-white transition-colors opacity-40 hover:opacity-100">
+              Admin
+            </Link>
           </div>
         </div>
       </div>
