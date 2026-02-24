@@ -39,7 +39,7 @@ export default function AProposPage() {
       <section className="relative pt-24 sm:pt-32 pb-12 sm:pb-20 bg-primary-900">
         <div className="absolute inset-0 opacity-20">
           <Image
-            src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?w=1920&h=400&fit=crop&q=80"
+            src="/images/_template/hero/hero-principal.jpg"
             alt=""
             fill
             className="object-cover"
@@ -65,7 +65,7 @@ export default function AProposPage() {
             <FadeIn className="lg:w-1/2">
               <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1598902108854-d1446c07c44d?w=800&h=600&fit=crop"
+                  src="/images/_template/equipe/equipe-groupe.jpg"
                   alt="Notre équipe au travail"
                   fill
                   className="object-cover"

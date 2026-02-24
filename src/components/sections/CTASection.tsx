@@ -6,7 +6,7 @@ export default function CTASection() {
   return (
     <section className="relative py-28 overflow-hidden">
       <Image
-        src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1920&h=600&fit=crop&q=80"
+        src="/images/_template/hero/hero-principal.jpg"
         alt="Jardin de prestige"
         fill
         className="object-cover"

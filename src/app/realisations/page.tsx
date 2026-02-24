@@ -18,7 +18,7 @@ export default function RealisationsPage() {
       <section className="relative pt-24 sm:pt-32 pb-12 sm:pb-20 bg-primary-900">
         <div className="absolute inset-0 opacity-20">
           <Image
-            src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1920&h=400&fit=crop&q=80"
+            src="/images/_template/hero/hero-principal.jpg"
             alt=""
             fill
             className="object-cover"

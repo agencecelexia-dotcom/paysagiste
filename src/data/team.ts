@@ -7,7 +7,7 @@ export const team: TeamMember[] = [
     name: `${clientConfig.PRENOM_DIRIGEANT} ${clientConfig.NOM_DIRIGEANT}`,
     role: `Fondateur & ${clientConfig.DIPLOME_DIRIGEANT}`,
     bio: `${clientConfig.DIPLOME_DIRIGEANT.charAt(0).toUpperCase() + clientConfig.DIPLOME_DIRIGEANT.slice(1)}, ${clientConfig.PRENOM_DIRIGEANT} a fondé ${clientConfig.NOM_ENTREPRISE} en ${clientConfig.ANNEE_CREATION} avec la vision de créer des espaces extérieurs d'exception. Son expertise en design et sa passion pour la botanique guident chaque projet.`,
-    photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+    photo: "/images/_template/equipe/dirigeant.jpg",
     specialties: ["Design paysager", "Architecture de jardins", "Gestion de projets"],
   },
   {

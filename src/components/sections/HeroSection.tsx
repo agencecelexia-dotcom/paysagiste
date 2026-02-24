@@ -10,7 +10,7 @@ export default function HeroSection() {
     <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
       {/* Background image */}
       <Image
-        src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1920&h=1080&fit=crop&q=80"
+        src="/images/_template/hero/hero-principal.jpg"
         alt={`Jardin d'exception ${clientConfig.NOM_ENTREPRISE}`}
         fill
         priority

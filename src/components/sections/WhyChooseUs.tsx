@@ -19,7 +19,7 @@ export default function WhyChooseUs() {
           <FadeUp>
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=800&h=600&fit=crop&q=80"
+                src="/images/_template/equipe/equipe-groupe.jpg"
                 alt={`Équipe ${clientConfig.NOM_ENTREPRISE} au travail`}
                 fill
                 className="object-cover"
