@@ -322,7 +322,7 @@ export default function ProjetsTab() {
                     value={form.title}
                     onChange={(e) => handleTitleChange(e.target.value)}
                     className="w-full rounded-lg border border-neutral-200 px-3 py-2.5 text-sm focus:border-primary-900 focus:outline-none"
-                    placeholder="Jardin Contemporain à Lyon 6ème"
+                    placeholder="Titre du projet"
                   />
                 </div>
                 <div className="col-span-2">
@@ -359,7 +359,7 @@ export default function ProjetsTab() {
                     value={form.location}
                     onChange={(e) => setForm((f) => ({ ...f, location: e.target.value }))}
                     className="w-full rounded-lg border border-neutral-200 px-3 py-2.5 text-sm focus:border-primary-900 focus:outline-none"
-                    placeholder="Lyon 6ème"
+                    placeholder="Votre Ville"
                   />
                 </div>
                 <div>

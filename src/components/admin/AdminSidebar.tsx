@@ -14,6 +14,7 @@ import {
   LogOut,
   Leaf,
 } from "lucide-react";
+import { clientConfig } from "@/config/client.config";
 
 interface AdminSidebarProps {
   activeTab: string;
@@ -53,7 +54,7 @@ export default function AdminSidebar({ activeTab, setActiveTab }: AdminSidebarPr
             <Leaf size={18} className="text-white" />
           </div>
           <div className="min-w-0">
-            <p className="truncate text-sm font-bold text-white">Jardins de Prestige</p>
+            <p className="truncate text-sm font-bold text-white">{clientConfig.NOM_ENTREPRISE}</p>
             <p className="text-xs text-neutral-400">Administration</p>
           </div>
         </div>
