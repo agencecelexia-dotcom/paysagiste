@@ -3,6 +3,7 @@ import { Playfair_Display, DM_Sans } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollProgress from "@/components/ui/ScrollProgress";
+import { clientConfig } from "@/config/client.config";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -18,26 +19,18 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.jardins-de-prestige.fr"),
+  metadataBase: new URL(`https://${clientConfig.DOMAINE}`),
   title: {
-    default: "Jardins de Prestige | Paysagiste de Luxe à Lyon",
-    template: "%s | Jardins de Prestige",
+    default: clientConfig.META_TITLE,
+    template: `%s | ${clientConfig.NOM_ENTREPRISE}`,
   },
-  description:
-    "Paysagiste haut de gamme à Lyon. Création de jardins d'exception, aménagement paysager, entretien et élagage. Devis gratuit.",
-  keywords: [
-    "paysagiste lyon",
-    "jardin de luxe",
-    "aménagement paysager",
-    "création jardin",
-    "entretien jardin lyon",
-    "paysagiste haut de gamme",
-  ],
-  authors: [{ name: "Jardins de Prestige" }],
+  description: clientConfig.META_DESCRIPTION,
+  keywords: clientConfig.META_KEYWORDS.split(", "),
+  authors: [{ name: clientConfig.NOM_ENTREPRISE }],
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    siteName: "Jardins de Prestige",
+    siteName: clientConfig.NOM_ENTREPRISE,
   },
 };
 

@@ -6,11 +6,11 @@ import Button from "@/components/ui/Button";
 import FadeIn from "@/components/animations/FadeIn";
 import StatsSection from "@/components/sections/StatsSection";
 import { team } from "@/data/team";
+import { clientConfig } from "@/config/client.config";
 
 export const metadata: Metadata = {
   title: "À Propos",
-  description:
-    "Découvrez l'histoire de Jardins de Prestige, notre équipe de paysagistes passionnés et nos valeurs. Plus de 15 ans d'expertise au service de vos jardins à Lyon.",
+  description: `Découvrez l'histoire de ${clientConfig.NOM_ENTREPRISE}, notre équipe de paysagistes passionnés et nos valeurs. Plus de ${clientConfig.ANNEES_EXPERIENCE} ans d'expertise au service de vos jardins à ${clientConfig.VILLE}.`,
 };
 
 const values = [
@@ -79,13 +79,10 @@ export default function AProposPage() {
               </h2>
               <div className="mt-4 h-1 w-12 rounded-full bg-accent-500" />
               <p className="mt-6 text-neutral-600 leading-relaxed">
-                Fondée en 2009 par Antoine Leroy, architecte paysagiste diplômé de
-                l&apos;ENSP Versailles, Jardins de Prestige est née d&apos;une passion
-                profonde pour l&apos;art des jardins et d&apos;une vision : créer des
-                espaces extérieurs qui transcendent le quotidien.
+                {clientConfig.DESCRIPTION_APROPOS}
               </p>
               <p className="mt-4 text-neutral-600 leading-relaxed">
-                Depuis plus de 15 ans, notre équipe d&apos;experts conçoit et réalise
+                Depuis plus de {clientConfig.ANNEES_EXPERIENCE} ans, notre équipe d&apos;experts conçoit et réalise
                 des jardins d&apos;exception dans la région lyonnaise. Notre approche
                 allie créativité, expertise technique et respect de l&apos;environnement
                 pour donner vie à des espaces uniques qui reflètent la personnalité de

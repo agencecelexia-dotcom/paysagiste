@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
 import { projects } from "@/data/projects";
 import { blogPosts } from "@/data/blog-posts";
+import { clientConfig } from "@/config/client.config";
 
-const BASE_URL = "https://www.jardins-de-prestige.fr";
+const BASE_URL = `https://${clientConfig.DOMAINE}`;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [

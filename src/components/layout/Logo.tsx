@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { clientConfig } from "@/config/client.config";
 
 interface LogoProps {
   light?: boolean;
@@ -7,6 +8,9 @@ interface LogoProps {
 }
 
 export default function Logo({ light = false, className }: LogoProps) {
+  const [firstWord, ...rest] = clientConfig.NOM_ENTREPRISE.split(" ");
+  const restOfName = rest.join(" ");
+
   return (
     <Link href="/" className={cn("flex items-center gap-2 group", className)}>
       <svg
@@ -39,7 +43,7 @@ export default function Logo({ light = false, className }: LogoProps) {
             light ? "text-white" : "text-neutral-900"
           )}
         >
-          Jardins
+          {firstWord}
         </span>
         <span
           className={cn(
@@ -47,7 +51,7 @@ export default function Logo({ light = false, className }: LogoProps) {
             light ? "text-accent-300" : "text-accent-600"
           )}
         >
-          de Prestige
+          {restOfName}
         </span>
       </div>
     </Link>

@@ -5,11 +5,11 @@ import FadeIn from "@/components/animations/FadeIn";
 import ContactForm from "@/components/features/ContactForm";
 import GoogleMap from "@/components/features/GoogleMap";
 import { company } from "@/data/company";
+import { clientConfig } from "@/config/client.config";
 
 export const metadata: Metadata = {
   title: "Contact & Devis",
-  description:
-    "Contactez Jardins de Prestige pour un devis gratuit. Demande d'aménagement paysager, création de jardin, entretien à Lyon et environs.",
+  description: `Contactez ${clientConfig.NOM_ENTREPRISE} pour un devis gratuit. ${clientConfig.SERVICE_1_TITRE}, ${clientConfig.SERVICE_2_TITRE} à ${clientConfig.VILLE} et environs.`,
 };
 
 export default function ContactPage() {

@@ -1,27 +1,28 @@
 import type { CompanyInfo } from "@/types";
+import { clientConfig } from "@/config/client.config";
 
 export const company: CompanyInfo = {
-  name: "Jardins de Prestige",
-  legalName: "Jardins de Prestige SARL",
-  siret: "123 456 789 00012",
+  name: clientConfig.NOM_ENTREPRISE,
+  legalName: clientConfig.NOM_LEGAL,
+  siret: clientConfig.SIRET,
   address: {
-    street: "45 Avenue des Jardins",
-    city: "Lyon",
-    postalCode: "69003",
-    region: "Auvergne-Rhône-Alpes",
-    country: "France",
+    street: clientConfig.ADRESSE,
+    city: clientConfig.VILLE,
+    postalCode: clientConfig.CODE_POSTAL,
+    region: clientConfig.REGION,
+    country: clientConfig.PAYS,
   },
-  phone: "+33 4 78 12 34 56",
-  email: "contact@jardins-de-prestige.fr",
-  hours: "Lun-Ven: 8h00-18h00, Sam: 9h00-13h00",
+  phone: clientConfig.TELEPHONE,
+  email: clientConfig.EMAIL,
+  hours: clientConfig.HORAIRES,
   socialLinks: {
-    facebook: "https://facebook.com/jardinsdeprestige",
-    instagram: "https://instagram.com/jardinsdeprestige",
-    linkedin: "https://linkedin.com/company/jardinsdeprestige",
-    pinterest: "https://pinterest.com/jardinsdeprestige",
+    facebook: clientConfig.FACEBOOK_URL,
+    instagram: clientConfig.INSTAGRAM_URL,
+    linkedin: clientConfig.LINKEDIN_URL,
+    pinterest: clientConfig.PINTEREST_URL,
   },
   coordinates: {
-    lat: 45.7578,
-    lng: 4.832,
+    lat: parseFloat(clientConfig.LATITUDE),
+    lng: parseFloat(clientConfig.LONGITUDE),
   },
 };

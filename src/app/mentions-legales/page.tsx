@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import { company } from "@/data/company";
+import { clientConfig } from "@/config/client.config";
 
 export const metadata: Metadata = {
   title: "Mentions Légales",
-  description: "Mentions légales du site Jardins de Prestige.",
+  description: `Mentions légales du site ${clientConfig.NOM_ENTREPRISE}.`,
 };
 
 export default function MentionsLegalesPage() {
@@ -36,7 +37,7 @@ export default function MentionsLegalesPage() {
           </p>
 
           <h2>Directeur de la publication</h2>
-          <p>Antoine Leroy, Gérant de {company.legalName}.</p>
+          <p>{clientConfig.PRENOM_DIRIGEANT} {clientConfig.NOM_DIRIGEANT}, Gérant de {company.legalName}.</p>
 
           <h2>Hébergement</h2>
           <p>

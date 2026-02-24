@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { clientConfig } from "@/config/client.config";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -7,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/api/",
     },
-    sitemap: "https://www.jardins-de-prestige.fr/sitemap.xml",
+    sitemap: `https://${clientConfig.DOMAINE}/sitemap.xml`,
   };
 }

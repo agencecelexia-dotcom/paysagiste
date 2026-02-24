@@ -2,6 +2,7 @@ import Link from "next/link";
 import Logo from "./Logo";
 import { company } from "@/data/company";
 import { services } from "@/data/services";
+import { clientConfig } from "@/config/client.config";
 
 export default function Footer() {
   return (
@@ -13,8 +14,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <Logo light />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-neutral-300">
-              Créateurs de jardins d&apos;exception depuis 15 ans. Nous
-              transformons vos espaces extérieurs en véritables écrins de verdure.
+              {clientConfig.DESCRIPTION_FOOTER}
             </p>
             <div className="mt-6 flex gap-4">
               {company.socialLinks.instagram && (
