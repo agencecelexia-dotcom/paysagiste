@@ -28,7 +28,7 @@ export default function AdminDashboardPage() {
     <div className="fixed inset-0 z-50 flex overflow-hidden bg-neutral-50">
       <AdminSidebar activeTab={activeTab} setActiveTab={(tab) => setActiveTab(tab as Tab)} />
       <main className="flex-1 overflow-y-auto">
-        <div className="p-6 lg:p-8 max-w-7xl mx-auto">{renderTab()}</div>
+        <div className="px-6 pb-6 pt-16 lg:p-8 max-w-7xl mx-auto">{renderTab()}</div>
       </main>
     </div>
   );
