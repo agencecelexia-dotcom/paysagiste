@@ -36,8 +36,7 @@ export default function AdminSidebar({ activeTab, setActiveTab }: AdminSidebarPr
 
   async function handleLogout() {
     await fetch("/api/admin/login", { method: "DELETE" });
-    router.push("/admin/login");
-    router.refresh();
+    router.push("/");
   }
 
   function handleTabClick(tabId: string) {
