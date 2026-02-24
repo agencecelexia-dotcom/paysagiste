@@ -1,42 +1,47 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { clientConfig } from "@/config/client.config";
+import { useRouter } from "next/navigation";
 import {
-  LayoutDashboard,
+  BarChart3,
   FileText,
-  Image,
-  Star,
+  ImageIcon,
+  MessageSquare,
   Wrench,
   FolderOpen,
-  Search,
   Menu,
   X,
   LogOut,
   Leaf,
 } from "lucide-react";
 
-const navLinks = [
-  { href: "/admin/dashboard", label: "Dashboard", icon: LayoutDashboard },
-  { href: "/admin/contenu", label: "Contenu", icon: FileText },
-  { href: "/admin/photos", label: "Photos", icon: Image },
-  { href: "/admin/temoignages", label: "Témoignages", icon: Star },
-  { href: "/admin/services", label: "Services", icon: Wrench },
-  { href: "/admin/projets", label: "Projets", icon: FolderOpen },
-  { href: "/admin/seo", label: "SEO", icon: Search },
+interface AdminSidebarProps {
+  activeTab: string;
+  setActiveTab: (tab: string) => void;
+}
+
+const navItems = [
+  { id: "dashboard", label: "Dashboard", icon: BarChart3 },
+  { id: "contenu", label: "Contenu", icon: FileText },
+  { id: "photos", label: "Photos", icon: ImageIcon },
+  { id: "temoignages", label: "Témoignages", icon: MessageSquare },
+  { id: "services", label: "Services", icon: Wrench },
+  { id: "projets", label: "Projets", icon: FolderOpen },
 ];
 
-export default function AdminSidebar() {
+export default function AdminSidebar({ activeTab, setActiveTab }: AdminSidebarProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const pathname = usePathname();
   const router = useRouter();
 
   async function handleLogout() {
     await fetch("/api/admin/login", { method: "DELETE" });
     router.push("/admin/login");
     router.refresh();
+  }
+
+  function handleTabClick(tabId: string) {
+    setActiveTab(tabId);
+    setMobileOpen(false);
   }
 
   const SidebarContent = () => (
@@ -48,9 +53,7 @@ export default function AdminSidebar() {
             <Leaf size={18} className="text-white" />
           </div>
           <div className="min-w-0">
-            <p className="truncate text-sm font-bold text-white">
-              {clientConfig.NOM_ENTREPRISE}
-            </p>
+            <p className="truncate text-sm font-bold text-white">Jardins de Prestige</p>
             <p className="text-xs text-neutral-400">Administration</p>
           </div>
         </div>
@@ -59,23 +62,22 @@ export default function AdminSidebar() {
       {/* Navigation */}
       <nav className="flex-1 overflow-y-auto px-3 py-4">
         <ul className="space-y-1">
-          {navLinks.map((link) => {
-            const Icon = link.icon;
-            const isActive = pathname === link.href;
+          {navItems.map((item) => {
+            const Icon = item.icon;
+            const isActive = activeTab === item.id;
             return (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  onClick={() => setMobileOpen(false)}
-                  className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
+              <li key={item.id}>
+                <button
+                  onClick={() => handleTabClick(item.id)}
+                  className={`flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors text-left ${
                     isActive
                       ? "bg-white/15 text-white"
                       : "text-neutral-300 hover:bg-white/10 hover:text-white"
                   }`}
                 >
                   <Icon size={18} className={isActive ? "text-accent-500" : ""} />
-                  {link.label}
-                </Link>
+                  {item.label}
+                </button>
               </li>
             );
           })}
@@ -98,8 +100,8 @@ export default function AdminSidebar() {
   return (
     <>
       {/* Desktop Sidebar */}
-      <div className="hidden lg:block">
-        <div className="fixed left-0 top-0 h-full w-64">
+      <div className="hidden lg:flex lg:w-64 lg:flex-shrink-0">
+        <div className="w-64">
           <SidebarContent />
         </div>
       </div>
