@@ -4,11 +4,11 @@ import Container from "@/components/ui/Container";
 import FadeIn from "@/components/animations/FadeIn";
 import ProjectGallery from "@/components/features/ProjectGallery";
 import { projects } from "@/data/projects";
+import { clientConfig } from "@/config/client.config";
 
 export const metadata: Metadata = {
   title: "Nos Réalisations",
-  description:
-    "Découvrez nos réalisations de jardins d'exception, terrasses, aménagements paysagers et projets haut de gamme réalisés à Lyon et ses environs.",
+  description: `Découvrez nos réalisations de jardins d'exception, terrasses et aménagements paysagers haut de gamme réalisés à ${clientConfig.VILLE} et ses environs.`,
 };
 
 export default function RealisationsPage() {

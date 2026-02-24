@@ -77,7 +77,7 @@ export default function MentionsLegalesPage() {
           <p>
             Tout litige en relation avec l&apos;utilisation du site{" "}
             {company.name} est soumis au droit français. L&apos;utilisateur
-            reconnaît la compétence exclusive des tribunaux compétents de Lyon.
+            reconnaît la compétence exclusive des tribunaux compétents de {company.address.city}.
           </p>
         </Container>
       </section>

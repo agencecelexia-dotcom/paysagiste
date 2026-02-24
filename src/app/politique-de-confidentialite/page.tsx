@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import { company } from "@/data/company";
+import { clientConfig } from "@/config/client.config";
 
 export const metadata: Metadata = {
   title: "Politique de Confidentialité",
-  description: "Politique de confidentialité et protection des données personnelles de Jardins de Prestige.",
+  description: `Politique de confidentialité et protection des données personnelles de ${clientConfig.NOM_ENTREPRISE}.`,
 };
 
 export default function PolitiqueConfidentialitePage() {

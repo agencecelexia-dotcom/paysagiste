@@ -11,7 +11,7 @@ export default function HeroSection() {
       {/* Background image */}
       <Image
         src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1920&h=1080&fit=crop&q=80"
-        alt="Jardin d'exception Jardins de Prestige"
+        alt={`Jardin d'exception ${clientConfig.NOM_ENTREPRISE}`}
         fill
         priority
         className="object-cover"

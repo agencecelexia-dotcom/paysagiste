@@ -4,11 +4,11 @@ import Container from "@/components/ui/Container";
 import FadeIn from "@/components/animations/FadeIn";
 import BlogCard from "@/components/features/BlogCard";
 import { blogPosts } from "@/data/blog-posts";
+import { clientConfig } from "@/config/client.config";
 
 export const metadata: Metadata = {
   title: "Blog & Conseils",
-  description:
-    "Conseils d'entretien, tendances paysagères et astuces de saison. Le blog de Jardins de Prestige pour un jardin d'exception toute l'année.",
+  description: `Conseils d'entretien, tendances paysagères et astuces de saison. Le blog de ${clientConfig.NOM_ENTREPRISE} pour un jardin d'exception toute l'année.`,
 };
 
 export default function BlogPage() {

@@ -6,11 +6,11 @@ import StatsSection from "@/components/sections/StatsSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import CTASection from "@/components/sections/CTASection";
+import { clientConfig } from "@/config/client.config";
 
 export const metadata: Metadata = {
-  title: "Jardins de Prestige | Paysagiste de Luxe à Lyon",
-  description:
-    "Paysagiste haut de gamme à Lyon. Création de jardins d'exception, aménagement paysager, entretien et élagage. Devis gratuit.",
+  title: clientConfig.META_TITLE,
+  description: clientConfig.META_DESCRIPTION,
 };
 
 export default function Home() {

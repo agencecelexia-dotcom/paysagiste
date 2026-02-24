@@ -1,4 +1,5 @@
 import { company } from "@/data/company";
+import { clientConfig } from "@/config/client.config";
 
 export default function GoogleMap() {
   const query = encodeURIComponent(
@@ -8,7 +9,7 @@ export default function GoogleMap() {
   return (
     <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
       <iframe
-        title="Localisation de Jardins de Prestige"
+        title={`Localisation de ${clientConfig.NOM_ENTREPRISE}`}
         src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${query}&zoom=14`}
         width="100%"
         height="100%"
