@@ -1,34 +1,34 @@
-# CLIENT.md — Jardins de Prestige
+# CLIENT.md — Template Paysagiste
 # Source unique de vérité. Modifier ici, puis lancer : npm run sync-client
 
 ## IDENTITÉ
 
-NOM_ENTREPRISE: "Jardins de Prestige"
-NOM_LEGAL: "Jardins de Prestige SARL"
-SIRET: "123 456 789 00012"
+NOM_ENTREPRISE: "Nom de l'Entreprise"
+NOM_LEGAL: "Nom de l'Entreprise SARL"
+SIRET: "000 000 000 00000"
 METIER: "paysagiste"
 METIER_LABEL: "Paysagiste"
 GENRE_DIRIGEANT: "M"
-PRENOM_DIRIGEANT: "Antoine"
-NOM_DIRIGEANT: "Leroy"
-DIPLOME_DIRIGEANT: "architecte paysagiste diplômé de l'ENSP Versailles"
-ANNEE_CREATION: "2009"
+PRENOM_DIRIGEANT: "Prénom"
+NOM_DIRIGEANT: "Nom"
+DIPLOME_DIRIGEANT: "architecte paysagiste diplômé"
+ANNEE_CREATION: "2010"
 ANNEES_EXPERIENCE: "15"
 
 ## CONTACT
 
-TELEPHONE: "+33 4 78 12 34 56"
-EMAIL: "contact@jardins-de-prestige.fr"
-ADRESSE: "45 Avenue des Jardins"
-CODE_POSTAL: "69003"
-VILLE: "Lyon"
-DEPARTEMENT: "Rhône"
-REGION: "Auvergne-Rhône-Alpes"
+TELEPHONE: "00 00 00 00 00"
+EMAIL: "contact@votre-domaine.fr"
+ADRESSE: "1 Rue de la Paix"
+CODE_POSTAL: "00000"
+VILLE: "Votre Ville"
+DEPARTEMENT: "Votre Département"
+REGION: "Votre Région"
 PAYS: "France"
 HORAIRES: "Lun-Ven: 8h00-18h00, Sam: 9h00-13h00"
-ZONE_INTERVENTION: "Lyon et région"
-LATITUDE: "45.7578"
-LONGITUDE: "4.832"
+ZONE_INTERVENTION: "Votre ville et région"
+LATITUDE: "46.603354"
+LONGITUDE: "1.888334"
 
 ## BRANDING
 
@@ -42,19 +42,19 @@ FONT_CORPS: "DM Sans"
 
 ## SEO
 
-DOMAINE: "www.jardins-de-prestige.fr"
-META_TITLE: "Jardins de Prestige | Paysagiste de Luxe à Lyon"
-META_DESCRIPTION: "Paysagiste haut de gamme à Lyon. Création de jardins d'exception, aménagement paysager, entretien et élagage. Devis gratuit."
-META_KEYWORDS: "paysagiste lyon, jardin de luxe, aménagement paysager, création jardin, entretien jardin lyon, paysagiste haut de gamme"
+DOMAINE: "www.votre-domaine.fr"
+META_TITLE: "Nom de l'Entreprise | Paysagiste à Votre Ville"
+META_DESCRIPTION: "Paysagiste à Votre Ville. Création de jardins d'exception, aménagement paysager, entretien. Devis gratuit."
+META_KEYWORDS: "paysagiste, jardin de luxe, aménagement paysager, création jardin, entretien jardin, paysagiste haut de gamme"
 SCHEMA_TYPE: "LandscapeArchitect"
 
 ## CONTENU
 
-SLOGAN: "L'Art des Jardins d'Exception"
-ACCROCHE_HERO: "Paysagiste de prestige — Lyon"
-DESCRIPTION_ENTREPRISE: "Nous créons des espaces extérieurs uniques qui reflètent votre personnalité. Conception, réalisation, entretien — un accompagnement complet et sur mesure."
-DESCRIPTION_FOOTER: "Créateurs de jardins d'exception depuis 15 ans. Nous transformons vos espaces extérieurs en véritables écrins de verdure."
-DESCRIPTION_APROPOS: "Fondée en 2009 par Antoine Leroy, architecte paysagiste diplômé de l'ENSP Versailles, Jardins de Prestige est née d'une passion profonde pour l'art des jardins."
+SLOGAN: "Votre Slogan Ici"
+ACCROCHE_HERO: "Votre Métier — Votre Ville"
+DESCRIPTION_ENTREPRISE: "Votre description d'entreprise. Conception, réalisation, entretien — un accompagnement complet et sur mesure."
+DESCRIPTION_FOOTER: "Votre description courte pour le footer du site."
+DESCRIPTION_APROPOS: "Fondée par Prénom Nom, votre entreprise est née d'une passion profonde pour l'art des jardins."
 
 ## SERVICES
 
@@ -75,24 +75,24 @@ SERVICE_6_DESC: "Installation de systèmes d'arrosage automatique économes en e
 
 GOOGLE_MAPS_URL: ""
 GOOGLE_REVIEWS_URL: ""
-FACEBOOK_URL: "https://facebook.com/jardinsdeprestige"
-INSTAGRAM_URL: "https://instagram.com/jardinsdeprestige"
-LINKEDIN_URL: "https://linkedin.com/company/jardinsdeprestige"
-PINTEREST_URL: "https://pinterest.com/jardinsdeprestige"
+FACEBOOK_URL: ""
+INSTAGRAM_URL: ""
+LINKEDIN_URL: ""
+PINTEREST_URL: ""
 
 ## TÉMOIGNAGES
 
-TEMOIGNAGE_1_NOM: "Marie-Claire Dubois"
-TEMOIGNAGE_1_VILLE: "Lyon 6ème"
-TEMOIGNAGE_1_TEXTE: "Jardins de Prestige a transformé notre jardin en un véritable paradis. L'équipe a su comprendre nos envies et les traduire en un espace qui dépasse nos rêves."
+TEMOIGNAGE_1_NOM: "Client Satisfait"
+TEMOIGNAGE_1_VILLE: "Votre Ville"
+TEMOIGNAGE_1_TEXTE: "Nom de l'Entreprise a transformé notre jardin en un véritable paradis. L'équipe a su comprendre nos envies et les traduire en un espace magnifique."
 TEMOIGNAGE_1_NOTE: "5"
-TEMOIGNAGE_2_NOM: "Philippe & Anne Martin"
-TEMOIGNAGE_2_VILLE: "Écully"
-TEMOIGNAGE_2_TEXTE: "Le résultat est spectaculaire ! On se croirait dans une villa du Sud de la France. L'équipe est professionnelle, ponctuelle et à l'écoute."
+TEMOIGNAGE_2_NOM: "Famille Dupont"
+TEMOIGNAGE_2_VILLE: "Commune voisine"
+TEMOIGNAGE_2_TEXTE: "Le résultat est spectaculaire ! L'équipe est professionnelle, ponctuelle et à l'écoute. Nous recommandons vivement."
 TEMOIGNAGE_2_NOTE: "5"
-TEMOIGNAGE_3_NOM: "Laurent Girard"
-TEMOIGNAGE_3_VILLE: "Villeurbanne"
-TEMOIGNAGE_3_TEXTE: "Notre terrasse en ipé est magnifique. Le chantier a été impeccablement géré, dans les délais et le budget annoncés."
+TEMOIGNAGE_3_NOM: "M. Durant"
+TEMOIGNAGE_3_VILLE: "Ville proche"
+TEMOIGNAGE_3_TEXTE: "Notre terrasse est magnifique. Le chantier a été impeccablement géré, dans les délais et le budget annoncés."
 TEMOIGNAGE_3_NOTE: "5"
 
 ## INTÉGRATIONS
