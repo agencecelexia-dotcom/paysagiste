@@ -5,11 +5,11 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import FadeIn from "@/components/animations/FadeIn";
 import { services } from "@/data/services";
+import { clientConfig } from "@/config/client.config";
 
 export const metadata: Metadata = {
   title: "Nos Services",
-  description:
-    "Découvrez nos services de paysagisme haut de gamme : création de jardins, aménagement de terrasses, entretien paysager, élagage, clôtures et arrosage automatique à Lyon.",
+  description: `Découvrez nos services de ${clientConfig.METIER} haut de gamme : ${clientConfig.SERVICE_1_TITRE}, ${clientConfig.SERVICE_2_TITRE}, ${clientConfig.SERVICE_3_TITRE} à ${clientConfig.VILLE}.`,
 };
 
 export default function ServicesPage() {

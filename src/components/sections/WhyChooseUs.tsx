@@ -1,8 +1,9 @@
 import Image from "next/image";
 import FadeUp from "@/components/animations/FadeUp";
+import { clientConfig } from "@/config/client.config";
 
 const reasons = [
-  { title: "15 ans d'expertise", desc: "Une équipe chevronnée avec une maîtrise technique reconnue." },
+  { title: `${clientConfig.ANNEES_EXPERIENCE} ans d'expertise`, desc: "Une équipe chevronnée avec une maîtrise technique reconnue." },
   { title: "Projets sur mesure", desc: "Chaque jardin est unique, conçu selon vos envies et votre terrain." },
   { title: "Matériaux premium", desc: "Pierres nobles, bois exotiques, végétaux sélectionnés." },
   { title: "Garantie décennale", desc: "Tous nos travaux sont couverts par une assurance décennale." },
@@ -19,7 +20,7 @@ export default function WhyChooseUs() {
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
               <Image
                 src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=800&h=600&fit=crop&q=80"
-                alt="Équipe Jardins de Prestige au travail"
+                alt={`Équipe ${clientConfig.NOM_ENTREPRISE} au travail`}
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

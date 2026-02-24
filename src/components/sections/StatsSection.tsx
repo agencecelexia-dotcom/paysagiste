@@ -1,9 +1,10 @@
 "use client";
 import CountUp from "@/components/animations/CountUp";
 import FadeUp from "@/components/animations/FadeUp";
+import { clientConfig } from "@/config/client.config";
 
 const stats = [
-  { value: 15, suffix: "+", label: "Années d'expérience" },
+  { value: parseInt(clientConfig.ANNEES_EXPERIENCE), suffix: "+", label: "Années d'expérience" },
   { value: 500, suffix: "+", label: "Projets réalisés" },
   { value: 98, suffix: "%", label: "Clients satisfaits" },
   { value: 12, suffix: "", label: "Experts paysagistes" },

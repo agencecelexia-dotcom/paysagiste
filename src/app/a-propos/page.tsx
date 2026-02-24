@@ -83,7 +83,7 @@ export default function AProposPage() {
               </p>
               <p className="mt-4 text-neutral-600 leading-relaxed">
                 Depuis plus de {clientConfig.ANNEES_EXPERIENCE} ans, notre équipe d&apos;experts conçoit et réalise
-                des jardins d&apos;exception dans la région lyonnaise. Notre approche
+                des jardins d&apos;exception dans la région de {clientConfig.VILLE}. Notre approche
                 allie créativité, expertise technique et respect de l&apos;environnement
                 pour donner vie à des espaces uniques qui reflètent la personnalité de
                 chaque client.
